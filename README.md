@@ -2,19 +2,19 @@
 
 这个组件用于快速创建一个pageVIewController。
 
-#### 一、特性
+## 一、特性
 1. 快速创建。只需要把包含子控制器的数组传过去即可。
-```
+```objectivec
 - (instancetype)initWithViewControllers:(NSArray<UIViewController *> *)viewControllers
 ```
 2. 可以可选的指定一个SegmentedView，并指定其放置位置。
-```
+```objectivec
 - (instancetype)initWithViewControllers:(NSArray<UIViewController *> *)viewControllers
 segmentedView:(nullable UIView<KLSegmentedViewProtocol> *)segmentedView
 segmentedViewPosition:(KLSegmentedViewPosition)position;
 ```
 3. SegmentedView可定制化，只需遵循一个协议即可。
-```
+```objectivec
 // 如果你想自定义KLSegmentedView，你只需要实现这个协议即可。
 @protocol KLSegmentedViewProtocol <NSObject>
 @required
@@ -23,8 +23,8 @@ segmentedViewPosition:(KLSegmentedViewPosition)position;
 @end
 ```
 
-#### 二、用法
-```
+## 二、用法
+```objectivec
 NSArray *vcs = @[vc1, vc2, vc3, vc4, vc5, vc6];
 NSArray *titles = @[@"按钮1", @"按钮2", @"按钮3", @"按钮4", @"按钮5", @"按钮6"];
 
@@ -46,3 +46,8 @@ KLSegmentedViewController *segVc = [[KLSegmentedViewController alloc] initWithVi
     make.top.mas_equalTo(self.mas_topLayoutGuideBottom);
 }];
 ```
+
+## 三、
+由于时间有限，这个小组件是从公司代码里面分离出来的，定制化可能不是非常高，但是基本可以满足现在大部分app的需求。
+如果使用中有什么问题，可以给我提issue。或者加我微信：16621130658。
+感谢！
