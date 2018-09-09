@@ -1,0 +1,6 @@
+framework module Pods_KLPageViewController {
+  umbrella header "Pods-KLPageViewController-umbrella.h"
+
+  export *
+  module * { export * }
+}
